@@ -9,7 +9,6 @@ import org.springframework.data.relational.core.mapping.Table
 data class Hero(
 
     @Id
-    @JsonIgnore
     val id: Long?,
 
     val name: String,
