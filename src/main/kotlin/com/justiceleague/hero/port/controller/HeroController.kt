@@ -1,4 +1,4 @@
-package com.justiceleague.hero.config
+package com.justiceleague.hero.port.controller
 
 import com.justiceleague.hero.application.HeroApplicationService
 import com.justiceleague.hero.domain.common.NotFoundException
