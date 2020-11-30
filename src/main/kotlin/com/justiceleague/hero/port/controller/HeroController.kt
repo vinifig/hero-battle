@@ -15,17 +15,17 @@ class HeroController(
 
     @PostMapping
     fun createHero(@RequestBody hero: Hero): ResponseEntity<Hero> {
-        val hero = heroApplicationService.createHero(hero.name, hero.skills)
+        val createdHero = heroApplicationService.createHero(hero.name, hero.skills)
 
-        return ResponseEntity(hero, HttpStatus.CREATED)
+        return ResponseEntity(createdHero, HttpStatus.CREATED)
     }
 
     @PutMapping("{heroId}")
     fun updateHero(@PathVariable heroId: Long, @RequestBody hero: Hero): ResponseEntity<Hero> {
         return try {
-            val hero = heroApplicationService.updateHero(heroId, hero.name, hero.skills)
+            val updatedHero = heroApplicationService.updateHero(heroId, hero.name, hero.skills)
 
-            ResponseEntity(hero, HttpStatus.OK)
+            ResponseEntity(updatedHero, HttpStatus.OK)
         } catch (notFoundException: NotFoundException) {
             ResponseEntity(HttpStatus.NOT_FOUND)
         }
