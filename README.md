@@ -32,10 +32,10 @@ Start the docker-compose running this command in:
 
 ## Challenge Steps
 
-* [Hero Developed](/vinifig/hero-battle)
-* [Hero Tested](/vinifig/hero-battle/tree/hero-tested)
-* [Battle Developed](/vinifig/hero-battle/tree/battle-developed)
-* [Battle Tested](/vinifig/hero-battle/tree/battle-tested)
+* [Hero Developed](https://github.com/vinifig/hero-battle)
+* [Hero Tested](https://github.com/vinifig/hero-battle/tree/hero-tested)
+* [Battle Developed](https://github.com/vinifig/hero-battle/tree/battle-developed)
+* [Battle Tested](https://github.com/vinifig/hero-battle/tree/battle-tested)
 
 ## Study's recommendations
 
