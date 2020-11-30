@@ -1,8 +1,10 @@
 package com.justiceleague.hero.port.controller
 
 import com.justiceleague.hero.application.HeroApplicationService
+import com.justiceleague.hero.domain.battle.Battle
 import com.justiceleague.hero.domain.common.NotFoundException
 import com.justiceleague.hero.domain.hero.Hero
+import com.justiceleague.hero.port.controller.model.BattleInput
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -40,6 +42,25 @@ class HeroController(
         } catch (notFoundException: NotFoundException) {
             ResponseEntity(HttpStatus.NOT_FOUND)
         }
+    }
+
+    @PostMapping("/battles")
+    fun createBattle(@RequestBody battleInput: BattleInput): ResponseEntity<Battle> {
+        return try {
+            val battle = heroApplicationService.createBattle(
+                battleInput.firstHero,
+                battleInput.secondHero
+            )
+
+            ResponseEntity(battle, HttpStatus.CREATED)
+        } catch (notFoundException: NotFoundException) {
+            ResponseEntity(HttpStatus.NOT_FOUND)
+        }
+    }
+
+    @GetMapping("/battles")
+    fun getBattles(): List<Battle> {
+        return heroApplicationService.getBattles()
     }
 
 }

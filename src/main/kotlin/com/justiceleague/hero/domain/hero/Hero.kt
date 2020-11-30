@@ -24,4 +24,8 @@ data class Hero(
             skills = newSkills
         )
     }
+
+    fun getPower(): Int {
+        return this.skills.sumBy { it.power }
+    }
 }
