@@ -36,3 +36,10 @@ Start the docker-compose running this command in:
 * [Hero Tested](/vinifig/hero-battle/tree/hero-tested)
 * [Battle Developed](/vinifig/hero-battle/tree/battle-developed)
 * [Battle Tested](/vinifig/hero-battle/tree/battle-tested)
+
+## Study's recommendations
+
+* DDD
+* Rest API
+* Unit Tests
+* Integration Tests
