@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/heroes")
 class HeroController(
-    val heroApplicationService: HeroApplicationService
+    private val heroApplicationService: HeroApplicationService
 ) {
 
     @PostMapping
